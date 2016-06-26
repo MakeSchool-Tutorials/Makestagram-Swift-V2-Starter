@@ -10,16 +10,15 @@ import UIKit
 
 class FilterCollectionViewCell: UICollectionViewCell {
   
-  @IBOutlet weak var filterLabel: UILabel!
-  @IBOutlet weak var filterPreviewImage: UIImageView!
+    @IBOutlet weak var filterLabel: UILabel!
+    @IBOutlet weak var filterPreviewImage: UIImageView!
 
-  var filter: Filter? {
-    didSet {
-      if let filter = filter {
-        filterLabel.text = filter.filterName
-        filterPreviewImage.image = UIImage(named: filter.filterPreviewImageFile)
-      }
+    var filter: Filter? {
+        didSet {
+            if let filter = filter {
+                filterLabel.text = filter.filterName
+                filterPreviewImage.image = UIImage(named: filter.filterPreviewImageFile)
+            }
+        }
     }
-  }
-  
 }
